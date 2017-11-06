@@ -34,6 +34,7 @@ public abstract class BaseSetUpActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         sp=getSharedPreferences("config",MODE_PRIVATE);
         //setContentView(R.layout.activity_base_set_up);
+
         mGestureDetector=new GestureDetector(this,new GestureDetector.SimpleOnGestureListener(){
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
@@ -43,12 +44,12 @@ public abstract class BaseSetUpActivity extends AppCompatActivity {
                 }
                 if ((e2.getRawX()-e1.getRawX())>200){
                     showPre();
-                    overridePendingTransition(R.anim.pre_in,R.anim.pre_out);
+                    overridePendingTransition(R.anim.abc_fade_in,R.anim.abc_fade_out);
                     return true;
                 }
                 if ((e1.getRawX()-e2.getRawX())>200){
                     showNext();
-                    overridePendingTransition(R.anim.next_in,R.anim.next_out);
+                    overridePendingTransition(R.anim.abc_popup_enter,R.anim.abc_popup_exit);
                     return true;
                 }
                 return super.onFling(e1, e2, velocityX, velocityY);
