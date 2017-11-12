@@ -126,6 +126,7 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
             case R.id.btn_addblacknumber:
                 //跳转至添加黑名单页面
                 startActivity(new Intent(this, AddBlackNumberActivity.class));
+                overridePendingTransition(R.anim.abc_slide_out_bottom,R.anim.abc_slide_out_top);
                 break;
         }
     }
@@ -143,5 +144,8 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
         pagenumber = 0;
         pageBlackNumber.clear();
         pageBlackNumber.addAll(dao.getPageBlackNumber(pagenumber, pagesize));
+        if (adapter!=null){
+            adapter.notifyDataSetChanged();
+        }
     }
 }

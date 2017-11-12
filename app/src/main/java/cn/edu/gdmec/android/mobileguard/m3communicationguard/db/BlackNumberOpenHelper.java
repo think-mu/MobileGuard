@@ -31,7 +31,7 @@ public class BlackNumberOpenHelper extends SQLiteOpenHelper {
                 "(id integer primary key autoincrement,"+
                 "number varchar(20),"+
                 "name varchar(255),"+
-                "mode integer)");
+                "mode integer,"+"mtype varchar(200))");
     }
     public void onUpgrade(SQLiteDatabase sqLiteDatabase,int i, int i1){
 
