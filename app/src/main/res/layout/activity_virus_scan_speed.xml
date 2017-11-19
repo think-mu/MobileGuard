@@ -11,7 +11,7 @@
         android:background="@color/blue">
 
         <TextView
-            android:id="@+id/tv_sanprocess"
+            android:id="@+id/tv_scanprocess"
             style="@style/wrapcontent"
             android:layout_centerInParent="true"
             android:textColor="@color/white"

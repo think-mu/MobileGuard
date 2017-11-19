@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <include layout="@layout/titlebar"/>
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,6 +15,13 @@
             android:layout_height="80dp"
             android:layout_centerInParent="true"
             android:background="@drawable/virusscan_icon"/>
+        <TextView
+            android:id="@+id/tvv_version"
+            style="@style/textview16sp"
+            android:layout_centerHorizontal="true"
+            android:text="病毒数据库版本:"
+            android:layout_above="@+id/tv_lastscantime"
+            android:textColor="@color/white"/>
         <TextView
             android:id="@+id/tv_lastscantime"
             style="@style/textview16sp"
@@ -26,23 +35,27 @@
         android:id="@+id/rl_allscanvirus"
         android:layout_width="match_parent"
         android:layout_height="70dp">
-
         <ImageView
-            android:id="@+id/imgv_quickscan"
+            android:id="@+id/imgv_quickscon"
             style="@style/wrapcontent"
             android:src="@drawable/quickscan_icon"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp" />
-
+            android:layout_marginLeft="10dp"/>
         <TextView
             android:id="@+id/tv_allscan"
             style="@style/textview16sp"
-            android:layout_toRightOf="@+id/imgv_quickscan"
+            android:layout_toRightOf="@+id/imgv_quickscon"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
+            android:text="全盘扫描"/>
+        <TextView
+            style="@style/textview14sp"
+            android:layout_below="@+id/tv_allscan"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imgv_quickscon"
+            android:layout_marginTop="10dp"
             android:text="全面扫描手机，杀毒更彻底"/>
-
         <View
             android:layout_width="13dp"
             android:layout_height="20dp"
