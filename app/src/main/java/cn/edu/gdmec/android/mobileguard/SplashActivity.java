@@ -29,6 +29,7 @@ public class SplashActivity extends AppCompatActivity {
         mVersion = MyUtils.getVersion(getApplicationContext());
         mTvVersion = (TextView) findViewById(R.id.tv_splash_version);
         mTvVersion.setText("版本号:"+mVersion);
+
         startActivity(new Intent(this, HomeActivity.class));
         finish();
     }
