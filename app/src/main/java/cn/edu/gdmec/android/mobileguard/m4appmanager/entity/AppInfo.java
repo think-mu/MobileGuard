@@ -16,6 +16,10 @@ public class AppInfo {
     public boolean isUserApp;
     public boolean isSelected=false;
     public String mVersion;
+    public String versionName;
+    public String signature;
+    public String requestedPermissions;
+    public String activities;
     public String InstallTime;
     public String certificate;
     public String permission;
@@ -26,4 +30,5 @@ public class AppInfo {
             return "外部存储";
         }
     }
+    public boolean isLock;
 }
