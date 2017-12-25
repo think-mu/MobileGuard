@@ -1,4 +1,3 @@
-
 package cn.edu.gdmec.android.mobileguard.m9advancedtools.db.dao;
 
 import android.content.Context;
@@ -6,15 +5,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 
-/**
- * Created by Administrator on 2017/12/3.
- */
+
 
 public class NumBelongtoDao {
     public static String getLocation(Context context,String phonenumber){
         String location = phonenumber;
         String dbname = context.getFilesDir() + "/address.db";
-        //System.out.println(dbname);
         SQLiteDatabase db = SQLiteDatabase.openDatabase(dbname,null,SQLiteDatabase.OPEN_READONLY);
         if(phonenumber.matches("^1[34578]\\d{9}$")){
             Cursor cursor = db.rawQuery("select location from data2 where id=(select outkey from data1 where id=?)",new String[] {phonenumber.substring(0,7)});

@@ -76,7 +76,7 @@ public class NumBelongtoActivity extends AppCompatActivity implements View.OnCli
                         copyDB(dbName);
                     }
                     String location = NumBelongtoDao.getLocation(this,phonenumber);
-                    mResultTV.setText("归属地："+location);
+                    mResultTV.setText("归属地：" + location);
                 }else{
                     Toast.makeText(this,"请输入需要查询的号码",Toast.LENGTH_SHORT).show();
                 }
